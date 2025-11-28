@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Interactive Photo Gallery</title>
     <style>
+        /* Main image container */
         #image {
             width: 400px;
             height: 300px;
@@ -18,10 +19,18 @@
             color: white;
             text-shadow: 1px 1px 2px black;
         }
+        /* Thumbnail images */
         .thumbnail {
             width: 100px;
             margin: 5px;
             cursor: pointer;
+            /* Added visual focus indicator for keyboard users */
+            outline: 2px solid transparent; 
+            transition: outline 0.2s;
+        }
+        /* Style for when an element has focus (mouse or keyboard) */
+        .thumbnail:focus, .thumbnail:hover {
+            outline: 2px solid blue; 
         }
     </style>
 </head>
@@ -29,10 +38,10 @@
 
 <div id="image">Hover over an image below to display here.</div>
 
-<img src="https://via.placeholder.com/100x100?text=1" alt="Image 1" class="thumbnail" onmouseover="upDate(this)" onmouseout="undo()">
-<img src="https://via.placeholder.com/100x100?text=2" alt="Image 2" class="thumbnail" onmouseover="upDate(this)" onmouseout="undo()">
-<img src="https://via.placeholder.com/100x100?text=3" alt="Image 3" class="thumbnail" onmouseover="upDate(this)" onmouseout="undo()">
+<img src="https://via.placeholder.com/100x100?text=1" alt="Image 1" class="thumbnail">
+<img src="https://via.placeholder.com/100x100?text=2" alt="Image 2" class="thumbnail">
+<img src="https://via.placeholder.com/100x100?text=3" alt="Image 3" class="thumbnail">
 
-<script src="gallery.js"></script>
+<script src="gallery.js" defer></script>
 </body>
 </html>
