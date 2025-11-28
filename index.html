@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Photo Gallery</title>
+    <style>
+        #image {
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+        .thumbnail {
+            width: 100px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="image">Hover over an image below to display here.</div>
+
+<img src="https://via.placeholder.com/100x100?text=1" alt="Image 1" class="thumbnail" onmouseover="upDate(this)" onmouseout="undo()">
+<img src="https://via.placeholder.com/100x100?text=2" alt="Image 2" class="thumbnail" onmouseover="upDate(this)" onmouseout="undo()">
+<img src="https://via.placeholder.com/100x100?text=3" alt="Image 3" class="thumbnail" onmouseover="upDate(this)" onmouseout="undo()">
+
+<script src="gallery.js"></script>
+</body>
+</html>
